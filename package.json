@@ -19,6 +19,7 @@
         "submodules:update": "git submodule update --init"
     },
     "dependencies": {
+        "@project/module": "file:./src/packages/module",
         "@ts-core/backend-nestjs": "~9.0.4",
         "@ts-core/common": "~3.0.34",
         "@ts-core/socket-server": "~3.0.15",
