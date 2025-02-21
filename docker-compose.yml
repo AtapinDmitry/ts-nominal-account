@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  dao-platform-api:
+  nominal-account-api:
     image: nominal-account-api
     env_file:
       - ./docker/api/.env

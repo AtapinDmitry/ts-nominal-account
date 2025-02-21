@@ -1,4 +1,4 @@
-import { EnvSettingsStorage } from '@ts-core/backend';
+import { IWebSettings, EnvSettingsStorage } from '@ts-core/backend';
 import { ILogger, LoggerLevel } from '@ts-core/common';
 
 export class AppSettings extends EnvSettingsStorage {
@@ -18,6 +18,20 @@ export class AppSettings extends EnvSettingsStorage {
 
     public get loggerLevel(): LoggerLevel {
         return this.getValue('LOGGER_LEVEL', LoggerLevel.ALL);
+    }
+
+    // --------------------------------------------------------------------------
+    //
+    //  Web Properties
+    //
+    // --------------------------------------------------------------------------
+
+    public get webPort(): number {
+        return this.getValue('WEB_PORT');
+    }
+
+    public get webHost(): string {
+        return this.getValue('WEB_HOST', 'localhost');
     }
 
     // --------------------------------------------------------------------------

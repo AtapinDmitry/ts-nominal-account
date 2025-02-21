@@ -4,6 +4,8 @@ import { AppSettings } from './AppSettings';
 import { AbstractService } from '@project/module/core/service';
 import { Logger, Transport } from '@ts-core/common';
 import { InitializeService } from './service';
+import { TransportModule, TransportType } from '@ts-core/backend-nestjs';
+
 
 export class AppModule extends AbstractService implements OnApplicationBootstrap {
     // --------------------------------------------------------------------------
@@ -17,6 +19,7 @@ export class AppModule extends AbstractService implements OnApplicationBootstrap
             module: AppModule,
             imports: [
                 LoggerModule.forRoot(settings),
+                TransportModule.forRoot({ type: TransportType.LOCAL }),
             ],
             controllers: [
             ],

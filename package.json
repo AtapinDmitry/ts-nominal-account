@@ -9,13 +9,13 @@
         "start:dev": "export $(grep -v '^#' .env | xargs) && npm run start:dev --prefix src/packages/application/api",
         "build": "npm run build --prefix src/packages/application/api",
         "reset": "npm run reset --prefix src/packages/application/api",
-        "api:docker:image:build": "docker build -t dao-platform-api -f ./docker/api/Dockerfile .",
-        "api:docker:image:update": "docker pull dao-platform-api",
-        "api:docker:image:remove": "docker rmi -f dao-platform-api",
-        "api:docker:container:run": "docker-compose up -d dao-platform-api",
-        "api:docker:container:start": "docker start dao-platform-api",
-        "api:docker:container:stop": "docker stop dao-platform-api",
-        "api:docker:container:remove": "docker rm dao-platform-api",
+        "api:docker:image:build": "docker build -t nominal-account-api -f ./docker/api/Dockerfile .",
+        "api:docker:image:update": "docker pull nominal-account-api",
+        "api:docker:image:remove": "docker rmi -f nominal-account-api",
+        "api:docker:container:run": "docker-compose up -d nominal-account-api",
+        "api:docker:container:start": "docker start nominal-account-api",
+        "api:docker:container:stop": "docker stop nominal-account-api",
+        "api:docker:container:remove": "docker rm nominal-account-api",
         "submodules:update": "git submodule update --init"
     },
     "dependencies": {
@@ -25,7 +25,8 @@
         "@ts-core/socket-server": "~3.0.15",
         "@ts-core/eth": "^3.0.4",
         "@ts-core/language": "~3.0.14",
-        "@ts-core/oauth": "~3.0.17"
+        "@ts-core/oauth": "~3.0.17",
+        "@nestjs/platform-express": "^9.4.2"
     },
     "devDependencies": {
         "@types/body-parser": "^1.19.5",
