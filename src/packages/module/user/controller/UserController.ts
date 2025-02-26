@@ -11,16 +11,16 @@ export class UserController {
     @ApiOperation({ summary: 'Добавление информации' })
     @ApiResponse({ status: HttpStatus.OK })
     @Post('info')
-    public CreateInfo(
+    public async CreateInfo(
         @Body() info: Info
-    ): number {
+    ): Promise<number> {
         return this.userService.createInfo(info);
     }
 
     @ApiOperation({ summary: 'Извлечение информации' })
     @ApiResponse({ status: HttpStatus.OK })
     @Get('info')
-    public GetInfos(): InfoList {
+    public async GetInfos(): Promise<InfoList> {
         return this.userService.getInfos();
     }
 }

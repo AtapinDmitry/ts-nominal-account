@@ -34,6 +34,7 @@
         "@types/compression": "^1.7.5",
         "class-transformer": "^0.5.1",
         "class-validator": "^0.14.1",
+        "node-fetch": "^2.7.0",
         "prettier": "^2.5.1",
         "ts-node": "^10.7.0",
         "ts-node-dev": "^1.1.8",
